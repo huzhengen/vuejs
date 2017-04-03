@@ -6,10 +6,16 @@
 
 vue，jQuery，Bootstrap，laypage.js（分页）
 
-未解决：
+未解决问题：
 
-原作者：<span class="badge" v-text="info.create_at | time"></span>
+原作者写的：
+```
+<span class="badge" v-text="info.create_at | time"></span>
+```
 
-我写的：<span class="badge">{{info.create_at | time}}</span>
+我写的：
+```
+<span class="badge">{{info.create_at | time}}</span>
+```
 
 我用原作者写的会出错，没百度到解决方法。
