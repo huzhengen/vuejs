@@ -8,12 +8,12 @@ vue，jQuery，Bootstrap，laypage.js（分页）
 
 未解决问题：
 
-原作者写的：
+原作者写的：（原作者用的应该是vue1）
 ```
 <span class="badge" v-text="info.create_at | time"></span>
 ```
 
-我写的：
+我写的：（我用的vue2）
 ```
 <span class="badge">{{info.create_at | time}}</span>
 ```
