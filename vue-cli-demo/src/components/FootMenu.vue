@@ -1,12 +1,8 @@
 <template>
-  <div id="navmenu">
+  <div id="footmenu">
     <el-menu :default-active="$route.path" router class="el-menu-demo" mode="horizontal" @select="handleSelect">
-      <template v-for="route in $router.options.routes" v-if="!route.hidden">
+      <template v-for="route in $router.options.routes" v-if="route.bottom">
         <el-menu-item v-if="!route.hasChild" :key="route.path" :index="route.path">{{route.name}}</el-menu-item>
-        <el-submenu v-else :index="route.path">
-          <template slot="title">{{route.name}}</template>
-          <el-menu-item v-for="child in route.children" :index="child.path" :key="child.path">{{child.name}}</el-menu-item>
-        </el-submenu>
       </template>
     </el-menu>
     <div class="line"></div>
@@ -24,13 +20,13 @@
 </script>
 
 <style lang="scss">
-  #navmenu{
+  #footmenu{
     position: fixed;
     left:0;
-    top:0;
+    bottom:0;
     width:100%;
     li{
-      width:25%;
+      width:50%;
       box-sizing:border-box;
       a{
         text-decoration:none;

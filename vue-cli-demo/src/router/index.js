@@ -31,12 +31,14 @@ export default new Router({
     {
       path: '/login',
       hidden: true,
+      bottom: true,
       name: '登录',
       component: Login
     },
     {
       path: '/register',
       hidden: true,
+      bottom: true,
       name: '注册',
       component: Register
     },

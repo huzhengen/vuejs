@@ -10,13 +10,13 @@
         <el-footer><h1>footer</h1></el-footer>
     </el-container>
     <nav-menu></nav-menu>
+    <foot-menu></foot-menu>
   </div>
 </template>
 
 <script>
-import PugDemo from '@/components/PugDemo'
-import Tab     from '@/components/Tab'
 import NavMenu     from '@/components/NavMenu'
+import FootMenu     from '@/components/FootMenu'
 export default {
   name: 'app',  
   computed:{
@@ -25,9 +25,8 @@ export default {
     }
   },  
   components: {
-    'pug-demo': PugDemo,
-    'tab': Tab,
-    'nav-menu': NavMenu
+    'nav-menu': NavMenu,
+    'foot-menu': FootMenu
   }
 }
 </script>
