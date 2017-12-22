@@ -41,6 +41,11 @@ export default new Router({
       bottom: true,
       name: '注册',
       component: Register
+    },    
+    {
+      path: '/products',
+      name: '产品',
+      component: Products
     },
     {
       path: '/FAQ',
@@ -48,16 +53,12 @@ export default new Router({
       component: FAQ
     },
     {
-      path: '/products',
-      name: '产品',
-      component: Products
-    },
-    {
     	path: '/manager',
     	name: '管理',
     	component: Manager,
     	redirect: '/manager/my',
     	hasChild: true,
+      bottom: true,
     	children: [
     		{
     			path: '/manager/my',
