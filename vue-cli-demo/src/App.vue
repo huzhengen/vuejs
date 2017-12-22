@@ -1,16 +1,10 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png">    
-    <pug-demo></pug-demo>
-    <tab></tab>
-    <router-view/> -->
+    <foot-menu></foot-menu>
     <el-container>
-        <el-header><h1>header</h1></el-header>
         <el-main><router-view/></el-main>
-        <el-footer><h1>footer</h1></el-footer>
     </el-container>
     <nav-menu></nav-menu>
-    <foot-menu></foot-menu>
   </div>
 </template>
 
