@@ -35,6 +35,16 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
+    },
+    //lufang
+    before(app){
+      var shops = require('../mock/shop.json')
+      app.get('/api/shops', function(req, res){
+        res.json({
+          code: 0,
+          data: shops
+        });
+      });
     }
   },
   plugins: [

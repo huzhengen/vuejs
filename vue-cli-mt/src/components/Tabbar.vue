@@ -1,5 +1,5 @@
 <template>
-	<mt-tabbar v-model="selected">
+	<mt-tabbar fixed v-model="selected">
 	  <mt-tab-item id="index">
 	    首页
 	  </mt-tab-item>
@@ -17,7 +17,7 @@ export default {
   name: 'Tabbar',
   data(){
   	return {
-  		selected: 'index'
+  		selected: 'index',
   	}
   },
   watch: {

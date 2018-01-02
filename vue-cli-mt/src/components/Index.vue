@@ -16,6 +16,22 @@ export default{
 		'swipe': Swipe,
 		'type-item': TypeItem,
 		'shop-list': ShopList,
+	},
+	methods: {
+		_initShopData(){
+			this.axios.get('/api/shops', {
+				params:{}
+			}).then(res=>{
+				if(res.data.code == 0){
+					this.shopList = res.data.data
+				}
+			}).catch(error=>{
+				console.log(error)
+			})
+		}
+	},
+	mounted(){
+		this._initShopData()
 	}
 }
 </script>
