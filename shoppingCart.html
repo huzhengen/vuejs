@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shopping cart</title>
+	<style>
+		table{
+			width: 800px;
+			margin: 0 auto;
+			border: 1px solid #ccc;
+		}
+	</style>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+</head>
+<body>
+	<table id="cart">
+		<thead>
+			<tr>
+				<th>商品信息</th>
+				<th>单价</th>
+				<th>数量</th>
+				<th>运费</th>
+				<th>金额</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img src="images/iPhone X.jpg" alt="" width="150"></td>
+				<td><input type="number" name="" id="" v-model="price"></td>
+				<td><input type="number" name="" id="" v-model="num"></td>
+				<td><input type="number" name="" id="" v-model="trans"></td>
+				<td>￥{{ price * num + trans }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<script>
+		var vm = new Vue({
+			el: '#cart',
+			data: {
+				price: 9000,
+				num: 1,
+				trans: 10
+			}
+		})
+	</script>
+</body>
+</html>
